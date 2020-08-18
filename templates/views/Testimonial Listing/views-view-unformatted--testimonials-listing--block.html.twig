@@ -1,0 +1,47 @@
+<div class="testimonials-listing-section">
+  <div class="testimonials-listing-container">
+    <div class="testimonials-listing-wrapper">
+      {% for row in rows %}
+        {% if loop.index is odd %}
+        <div class="testimonials-listing-row-wrapper">
+          <div class="testimonials-listing-row">
+        {% endif %}
+            {{ row }}
+        {% if loop.index is even %}
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <!-- <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+      <ul class="pager__items">
+        <li class="pager__item pager__item--first">
+          <a href="?page=0" title="Go to first page">
+            <span aria-hidden="true">First</span>
+          </a>
+        </li>
+        <li class="pager__item pager__item--previous">
+          <a href="?page=0" title="Go to previous page" rel="prev">
+            <span aria-hidden="true">Previous</span>
+          </a>
+        </li>
+        <li class="pager__item">
+          <a href="?page=0" title="Go to page 1">1</a>
+        </li>
+        <li class="pager__item is-active">
+          <a href="?page=1" title="Current page">2</a>
+        </li>
+        <li class="pager__item pager__item--next">
+          <a href="?page=1" title="Go to next page" rel="next">
+            <span aria-hidden="true">Next</span>
+          </a>
+        </li>
+        <li class="pager__item pager__item--last">
+          <a href="?page=1" title="Go to last page">
+            <span aria-hidden="true">Last</span>
+          </a>
+        </li>
+      </ul>
+    </nav> -->
+  </div>
+</div>

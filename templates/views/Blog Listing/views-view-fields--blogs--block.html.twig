@@ -1,0 +1,19 @@
+
+<div class="blogs-listing-item-wrapper">
+  <div class="blogs-listing-item">
+    <div class="blog-listing-image">
+      {{ fields.field_blog_image.content }}
+    </div>
+    <div class="blog-listing-content">
+      <div class="blog-listing-title">
+        <h2>{{ fields.title.content }}</h2>
+      </div>
+      <div class="blog-listing-summary">
+        {{ fields.field_blog_summary.content }}
+      </div>
+      <div class="blog-listing-link">
+        <a class="button button-yellow button-small" href="{{ fields.view_node.content }}">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>

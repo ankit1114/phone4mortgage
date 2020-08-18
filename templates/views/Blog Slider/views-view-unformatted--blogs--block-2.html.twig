@@ -1,0 +1,18 @@
+<div class="blogs-slider-section">
+  <div class="blogs-slider-container">
+    <div class="blogs-slider-wrapper">
+      <div class="blogs-slider owl-loaded owl-drag">
+        <div class="owl-stage-outer">
+          <div class="owl-stage" style="transform: translate3d(-3600px, 0px, 0px); transition: all 0s ease 0s; width: 13200px;">
+            {% for row in rows %}
+              <div class="owl-item" style="width: 1200px;">
+                {{ row }}
+              </div>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

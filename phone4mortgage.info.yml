@@ -1,0 +1,11 @@
+name: Phone 4 Mortgage
+type: theme
+core: 8.x
+description: A theme for Phone 4 Mortgage
+
+regions:
+  content: Content
+  footer_content: Footer Content
+
+libraries:
+  - phone4mortgage/global-styling

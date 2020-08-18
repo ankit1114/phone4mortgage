@@ -1,0 +1,94 @@
+{% set alignClass %}
+  {{ content.field_ext_align }}
+{% endset %}
+<section class="main-content-wrapper">
+  <div class="banner-section">
+    <div class="banner-top-image-wrapper">
+      <img src="{{ header_image }}">
+    </div>
+    <div class="main-banner-wrapper">
+      <div class="banner-image-wrapper">
+        {{ content.field_banner_image }}
+      </div>
+      <div class="banner-content-wrapper">
+        <div class="banner-content">
+          <h2 class="banner-heading">{{ content.field_banner_heading }}</h2>
+          {{ content.field_banner_content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if content.field_services|length > 18 %}
+  <div class="our-services-promo-section">
+    <div class="our-services-promo-wrapper">
+      <div class="our-services-promo-container">
+        <div class="our-services-promo-grid">
+          {{ content.field_services }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% if content.field_page_main_content|length > 3 %}
+  {% if alignClass|striptags|trim == 'center' %}
+  <div class="dark-background-section center">
+  {% elseif alignClass|striptags|trim == 'left' %}
+  <div class="dark-background-section left">
+  {% else %}
+  <div class="dark-background-section center">
+  {% endif %}
+    <div class="dark-background-contanier">
+      <!-- Promo Items -->
+      <div class="page-main-content-wrapper">
+        <div class="page-main-content">
+          <h2>{{ content.field_page_main_content_title }}</h2>
+          {{ content.field_page_main_content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if content.body|length > 3 %}
+    <div class="light-background-section">
+      <div class="dark-background-contanier">
+        <div class="page-main-content-wrapper">
+          <div class="page-main-content">
+            {{ content.body }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if content.field_calculator_discripion|length > 3 %}
+  <div class="calculators-main-content">
+    <div class="calculator-description-wrapper">
+      <div class="calculator-description-container">
+        <div class="calculator-description">
+          {{ content.field_calculator_discripion }}
+        </div>
+      </div>
+    </div>
+    {% set calculatorLink %}
+      {{ content.field_calculator_ifream_link }}
+    {% endset %}
+    {% set calculatorHeight %}
+      {{ content.field_ifream_height }}
+    {% endset %}
+    {% if calculatorLink %}
+    <div class="calculator-ifream-wrapper">
+      <div class="calculator-ifream-container">
+        <div class="calculator-ifream">
+          <iframe src="{{ calculatorLink|striptags }}" style="height: {{ calculatorHeight|striptags|trim }}">
+          </iframe>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+  {{ ServicesListing }}
+  {{ drupal_entity('webform', 'call_back') }}
+</section>
+

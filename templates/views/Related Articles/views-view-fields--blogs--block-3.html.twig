@@ -1,0 +1,20 @@
+<div class="related-articles-grid-item-wrapper">
+  <div class="related-articles-grid-item">
+    <div class="related-article-item">
+      <div class="related-article-image">
+        {{ fields.field_blog_image.content }}
+      </div>
+      <div class="related-article-content">
+        <div class="related-article-title">
+          <h2>{{ fields.title.content }}</h2>
+        </div>
+        <div class="related-article-summary">
+          {{ fields.field_blog_summary.content }}
+        </div>
+        <div class="related-article-link">
+          <a class="button button-yellow button-small" href="{{ fields.view_node.content }}">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

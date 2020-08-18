@@ -1,0 +1,18 @@
+<div class="blogs-slider-item-wrapper">
+  <div class="blogs-slider-item">
+    <div class="blog-image">
+      {{ fields.field_blog_image.content }}
+    </div>
+    <div class="blog-content">
+      <div class="blog-title">
+        <h2>{{ fields.title.content }}</h2>
+      </div>
+      <div class="blog-summary">
+        {{ fields.field_short_summary.content }}
+      </div>
+      <div class="blog-link">
+        <a class="button button-small button-yellow" href="{{ fields.view_node.content }}">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>

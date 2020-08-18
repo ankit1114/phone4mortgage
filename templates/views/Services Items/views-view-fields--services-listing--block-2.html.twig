@@ -1,0 +1,16 @@
+{% set FileLink %}
+  {{ fields.field_file.content }}
+{% endset %}
+<div class="service-item-wrapper">
+  <div class="service-item">
+    <div class="service-item-image">
+      {{ fields.field_services_image.content }}
+    </div>
+    <div class="service-item-title">
+      {{ fields.field_services_item_title.content }}
+    </div>
+    <div class="service-item-link">
+      <a class="button button-dark" target="_blank" href="{{ FileLink|striptags|trim }}">Open</a>
+    </div>
+  </div>
+</div>

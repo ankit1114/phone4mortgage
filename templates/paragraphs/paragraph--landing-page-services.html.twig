@@ -1,0 +1,18 @@
+{% set serviceLink %}
+  {{ content.field_service_link }}
+{% endset %}
+
+<div class="our-services-promo-grid-item-wrapper">
+  <div class="promo-grid-image">
+    {{ content.field_service_image }}
+  </div>
+  <div class="promo-grid-title">
+    <h2>{{ content.field_service_title }}</h2>
+  </div>
+  <div class="promo-grid-description">
+    {{ content.field_service_summary }}
+  </div>
+  <div class="promo-grid-link">
+    <a class="button button-yellow button-small" href="{{ serviceLink|striptags|trim }}">Read More</a>
+  </div>
+</div>

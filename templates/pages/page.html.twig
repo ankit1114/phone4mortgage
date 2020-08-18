@@ -1,0 +1,67 @@
+{% if is_front %}
+<div class="page-wrapper">
+{% elseif pageclass|length > 2 %}
+<div class="page-wrapper inner-pages {{ pageclass }}">
+{% else %}
+<div class="page-wrapper inner-pages">
+{% endif %}
+  <header>
+    <div class="mobile-header">
+      <div class="mobile-contact-info">
+        <a href="tel:{{ phone4mortgage_contact_number }}" class="mobile-header-contact-number"><span><img src="{{ base_path }}/{{ directory }}/images/phone.png"></span> <span>{{ phone4mortgage_contact_number }}</span></a>
+      </div>
+      <div class="mobile-navigation">
+        <div class="navigation-toggle-buttons">
+          <button class="open">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <button class="close">
+            <span>X</span>
+          </button>
+          <div class="mobile-navigation-wrapper">
+            <div class="mobile-navigation-container">
+              {{ mobilemenu }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="{{base_path}}"><h2>{{ phone4mortgage_logo_text }}</a>
+        </div>
+        <div class="navigation">
+          {{ menu }}
+        </div>
+        <div class="contact-info">
+          <div class="contact-message">Call us now : </div>
+          <div class="contact-number">
+            <a href="tel:{{ phone4mortgage_contact_number }}" class="header-contact-number">{{ phone4mortgage_contact_number }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {% if page.content %}
+    {{ page.content }}
+  {% endif %}
+
+  <footer class="site-footer-wrapper">
+    <div class="footer-raphic">
+      <img src="{{ base_path }}/{{ directory }}/images/Footer.png">
+    </div>
+    <div class="site-footer">
+      <div class="site-footer-container">
+        {% if page.footer_content %}
+          {{ page.footer_content }}
+        {% endif %}
+    </div>
+  </footer>
+  <div class="back-to-top-wrapper">
+    <a id="back-to-top-button" href="javascript:void(0)" title="Back to top"><img src="{{ base_path }}/{{ directory }}/images/up-arrow.png"></a>
+  </div>
+</div>

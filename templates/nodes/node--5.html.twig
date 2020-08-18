@@ -1,0 +1,47 @@
+{% set onlineDairyLink %}
+  {{ online_dairy_link }}
+{% endset %}
+<section class="main-content-wrapper">
+  <div class="banner-section">
+    <div class="banner-top-image-wrapper">
+      <img src="{{ header_image }}">
+    </div>
+    <div class="main-banner-wrapper">
+      <div class="banner-image-wrapper">
+        {{ content.field_banner_image }}
+      </div>
+      <div class="banner-content-wrapper">
+        <div class="banner-content">
+          <h2 class="banner-heading">{{ content.field_banner_heading }}</h2>
+          {{ content.field_banner_content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if content.field_services|length > 3 %}
+  <div class="our-services-promo-section">
+    <div class="our-services-promo-wrapper">
+      <div class="our-services-promo-container">
+        <div class="our-services-promo-grid">
+          {{ content.field_services }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="dark-background-section center">
+    <div class="dark-background-contanier">
+      <div class="page-main-content-wrapper">
+        <div class="page-main-content">
+          {{ content.field_page_main_content_title }}
+          {{ content.field_page_main_content }}
+          <p><a href="{{ online_dairy_link|striptags|trim }}"><img src="{{ diary_graphics }}"></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ HomeInsurance }}
+  {{ drupal_entity('webform', 'call_back') }}
+</section>

@@ -1,0 +1,21 @@
+{% if links|length > 0 %}
+  <ul class="main-menu">
+    {% for link in links %}
+      {% if link.subMenu|length > 0 %}
+        <li class="main-menu-item parent">
+      {% else %}
+        <li class="main-menu-item">
+      {% endif %}
+        {{ link.link }}
+        {% if link.subMenu|length > 0 %}
+          <ul class="sub-menu">
+            {% for subMenuLink in link.subMenu %}
+              <li class="sub-menu-item">{{ subMenuLink.link }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+

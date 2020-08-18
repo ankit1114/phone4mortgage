@@ -1,0 +1,38 @@
+<section class="main-content-wrapper">
+  <!-- Banner Section -->
+  <div class="banner-section">
+    <div class="banner-top-image-wrapper">
+      <img src="{{ header_image }}">
+    </div>
+    <div class="main-banner-wrapper">
+      <div class="banner-image-wrapper">
+        {{ content.field_blog_banner_image }}
+      </div>
+      <!-- <div class="banner-content-wrapper">
+        <div class="banner-content">
+          <h2 class="banner-heading">LOREM IPSUM DOLOR SIT</h2>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <!-- Blog Detail -->
+  <div class="blog-main">
+    <div class="blog-details-container">
+      <div class="blog-details-wrapper">
+        <div class="blog-title">
+          <h2>{{ content.field_blog_title }}</h2>
+        </div>
+        <div class="blog-post-date">
+          <p>Originally {{ content.field_posted_date }}</p>
+        </div>
+        <div class="bolg-body">
+          {{ content.field_blog_body }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if RelatedArticles %}
+    {{ RelatedArticles }}
+  {% endif %}
+  {{ drupal_entity('webform', 'call_back') }}
+</section>

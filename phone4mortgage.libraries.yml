@@ -1,0 +1,19 @@
+global-styling:
+  css:
+    theme:
+      css/fonts.css: {}
+      css/style.css: {}
+      css/responsive.css: {}
+
+  js:
+    #js/jquery.min.js: {}
+    js/owl.carousel.js: {}
+    js/theme.js: {}
+
+
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - drupal.form
+

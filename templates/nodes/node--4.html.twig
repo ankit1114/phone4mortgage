@@ -1,0 +1,44 @@
+<section class="main-content-wrapper">
+  <div class="banner-section">
+    <div class="banner-top-image-wrapper">
+      <img src="{{ header_image }}">
+    </div>
+    <div class="main-banner-wrapper">
+      <div class="banner-image-wrapper">
+        {{ content.field_banner_image }}
+      </div>
+      <div class="banner-content-wrapper">
+        <div class="banner-content">
+          <h2 class="banner-heading">{{ content.field_banner_heading }}</h2>
+          {{ content.field_banner_content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if content.field_page_main_content|length > 3 %}
+    <div class="dark-background-section">
+      <div class="dark-background-contanier">
+        <div class="page-main-content-wrapper">
+          <div class="page-main-content">
+            {{ content.field_page_main_content_title }}
+            {{ content.field_page_main_content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if content.body %}
+    <div class="light-background-section">
+      <div class="dark-background-contanier">
+        <div class="page-main-content-wrapper">
+          <div class="page-main-content">
+            {{ content.body }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</section>
+
+

@@ -1,0 +1,22 @@
+<section class="main-content-wrapper">
+  <div class="banner-section">
+    <div class="banner-top-image-wrapper">
+      <img src="{{ header_image }}">
+    </div>
+    <div class="main-banner-wrapper">
+      <div class="banner-image-wrapper">
+        {{ content.field_banner_image }}
+      </div>
+      <div class="banner-content-wrapper">
+        <div class="banner-content">
+          <h2 class="banner-heading">{{ content.field_banner_heading }}</h2>
+          {{ content.field_banner_content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ ServicesListing }}
+  {{ content.body }}
+  {{ drupal_entity('webform', 'call_back') }}
+</section>

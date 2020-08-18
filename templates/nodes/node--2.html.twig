@@ -1,0 +1,39 @@
+{% set alignClass %}
+  {{ content.field_ext_align }}
+{% endset %}
+<section class="main-content-wrapper">
+  <div class="banner-section">
+    <div class="banner-top-image-wrapper">
+      <img src="{{ header_image }}">
+    </div>
+    <div class="main-banner-wrapper">
+      <div class="banner-image-wrapper">
+        {{ content.field_banner_image }}
+      </div>
+      <div class="banner-content-wrapper">
+        <div class="banner-content">
+          <h2 class="banner-heading">{{ content.field_banner_heading }}</h2>
+          {{ content.field_banner_content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if alignClass|striptags|trim == 'center' %}
+  <div class="dark-background-section center">
+  {% elseif alignClass|striptags|trim == 'left' %}
+  <div class="dark-background-section left">
+  {% endif %}
+    <div class="dark-background-contanier">
+      <div class="page-main-content-wrapper">
+        <div class="page-main-content">
+          {{ content.field_page_main_content_title }}
+          {{ content.field_page_main_content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ ServicesListing }}
+  {{ content.body }}
+  {{ drupal_entity('webform', 'call_back') }}
+</section>

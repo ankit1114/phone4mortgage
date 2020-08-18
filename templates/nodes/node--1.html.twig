@@ -1,0 +1,67 @@
+{% set onlineDairyLink %}
+  {{ online_dairy_link }}
+{% endset %}
+<section class="main-content-wrapper">
+  <div class="banner-section">
+    <div class="banner-top-image-wrapper">
+      <img src="{{ header_image }}">
+      <img class="shild-image" src="{{ sheildimage }}">
+    </div>
+    <div class="main-banner-wrapper">
+      <div class="banner-image-wrapper">
+        {{ content.field_banner_image }}
+      </div>
+      <div class="banner-content-wrapper">
+        <div class="banner-content">
+          <h2 class="banner-heading">{{ content.field_banner_heading }}</h2>
+          {{ content.field_banner_content }}
+        </div>
+      </div>
+      <div class="online-diary-button">
+        <a target="_blank" href="{{ onlineDairyLink|striptags|trim }}"><img src="{{ diary_graphics }}"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dark-background-section center">
+    <div class="dark-background-contanier">
+      <!-- Promo Items -->
+      {% if PromoItem %}
+        {{ PromoItem }}
+      {% endif %}
+      <div class="page-main-content-wrapper">
+        <div class="page-main-content">
+          <h2>{{ content.field_page_main_content_title }}</h2>
+          {{ content.field_page_main_content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="request-callback-section">
+    <div class="request-callback-wrapper">
+      <div class="request-callback-image-wrapper">
+        <div class="request-callback-image">
+          <img src="{{ request_call_image }}">
+        </div>
+      </div>
+      <div class="request-callback-content-wrapper">
+        <div class="request-callback-title">
+          <h2>PHONE 4</h2>
+          <h3>MORTGAGES</h3>
+        </div>
+        <div class="request-callback-contact">
+          {{ drupal_entity('webform', 'contact_us') }}
+          <div class="request-callback-buttons-wrapper">
+            <a class="button button-yellow button-big" href="/phone4mortgage/contact-us">Contact Us</a>
+            <a target="_blank" class="online-diary-button" href="{{ onlineDairyLink|striptags|trim }}"><img src="{{ diary_graphics }}"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ HomeInsurance }}
+  {{ content.body }}
+  {{ ServicesListing }}
+  {{ TestimonialsSlider }}
+  {{ drupal_entity('webform', 'call_back') }}
+</section>

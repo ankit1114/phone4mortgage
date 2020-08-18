@@ -1,0 +1,17 @@
+<div class="testimonials-section">
+  <div class="testimonials-wrapper">
+    <div class="testimonials-content">
+      <div class="testimonial-image">
+        <img src="{{ testimonials_image }}">
+      </div>
+      <div class="testimonials-slider owl-loaded owl-drag">
+      <div class="owl-stage-outer">
+        <div class="owl-stage" style="transform: translate3d(-780px, 0px, 0px); transition: all 0s ease 0s; width: 3120px;">
+          {% for row in rows %}
+            {{ row }}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
